@@ -1,7 +1,8 @@
 import React from "react";
 import "../CustomButton.scss";
+import { withRouter } from "react-router-dom";
 
-const Button = ({ value }) => {
-  return <button className={"btn third"}>{value}</button>;
+const Button = ({ value, location , history}) => {
+  return <button className={"btn third"} onClick={() => history.push('/'+location)}>{value}</button>;
 };
-export default Button;
+export default withRouter(Button);
