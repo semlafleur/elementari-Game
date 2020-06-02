@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "./Components/button";
+import "./App.css";
+import { Container } from "@material-ui/core";
 
-function App() {
+const styles = {
+  container: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    justifyContent: "center",
+    marginTop: 200,
+  },
+};
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <div style={styles.container}>
+        <Button value={" 1-2 elementare"} />
+        <Button value={"3-4 elementare"} />
+          <Button value={"5 elementare"} />
+
+      </div>
+    </Container>
   );
-}
+};
 
 export default App;
