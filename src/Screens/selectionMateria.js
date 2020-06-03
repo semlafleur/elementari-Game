@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../Components/button'
 import { withRouter } from ''
 import { simple } from '../actions';
-import {useSelector, } from 'react-redux'
+import {useSelector} from 'react-redux'
 
 const globalState = useSelector(state => state)
 
@@ -21,4 +21,4 @@ const scegliMateria = ({history}) => {
             <Button value={"Ambiente"} onClick={() => history.push('/' + checkLevel('amb')) } />
         </>
     )
-}
+    }

@@ -18,4 +18,4 @@ const dispatch = useDispatch();
         </>
     )
 }
-export default withRouter(selectionClasse);
+export default selectionClasse; 

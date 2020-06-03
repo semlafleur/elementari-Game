@@ -1,4 +1,6 @@
- export const simple = () => {
+import React from 'react';
+
+export const simple = () => {
     return {
         type: 'SIMPLE',
         name : 'Simple'
