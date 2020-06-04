@@ -1,17 +1,17 @@
-import React from 'react';
-import { combineReducers } from 'redux';
+import React from "react";
+import { combineReducers } from "redux";
+import { simple, medium, hard } from "../Constants/levels";
 
-
-
-
-const changeLevel = (state = undefined, action) => {
-    switch (action.type) {
-        case 'SETDIFFICULT':
-            return action.value;
-    }
+const changeLevel = (state = simple, action) => {
+  switch (action.type) {
+    case "SETDIFFICULT":
+      return action.value;
+    default:
+      return state;
+  }
 };
 const allReducers = combineReducers({
-    changeLevel : changeLevel
+  changeLevel: changeLevel,
 });
 
 export default allReducers;

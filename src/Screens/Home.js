@@ -8,5 +8,5 @@ const Home = ({history}) => {
     return (
         <Button value={"Iniziamo"} onClick={() => history.push('/selectionClasse') } />
     )
-}
+};
 export default withRouter(Home);

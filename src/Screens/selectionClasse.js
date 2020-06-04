@@ -7,6 +7,7 @@ import { setDifficult } from '../actions'
 
 const SelectionClasse = () => {
 const level = useSelector(state=>state.changeLevel);
+console.log( "level : " + level)
 const dispatch = useDispatch();
 
     return (

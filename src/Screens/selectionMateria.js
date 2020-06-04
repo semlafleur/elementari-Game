@@ -6,11 +6,12 @@ import { useSelector } from "react-redux";
 
 const globalState = "Simple";
 
-const scegliMateria = ({ history }) => {
+const ScegliMateria = ({ history }) => {
+
+
   const checkLevel = (materia) => {
     return materia + globalState;
   };
-
 
   return (
     <>
@@ -29,3 +30,4 @@ const scegliMateria = ({ history }) => {
     </>
   );
 };
+export default withRouter(ScegliMateria);
