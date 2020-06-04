@@ -1,18 +1,18 @@
 import React from "react";
 import Home from "./Screens/Home";
-import selectionClasse from "./Screens/selectionClasse";
+import SelectionClasse from "./Screens/selectionClasse";
 
-import ambHard from "./Screens/materie/ambHard";
-import ambMedium from "./Screens/materie/ambMedium";
-import ambSimple from "./Screens/materie/ambSimple";
+import AmbHard from "./Screens/materie/ambHard";
+import AmbMedium from "./Screens/materie/ambMedium";
+import AmbSimple from "./Screens/materie/ambSimple";
 
-import mateHard from "./Screens/materie/mateHard";
-import mateMedium from "./Screens/materie/mateMedium";
-import mateSimple from "./Screens/materie/mateSimple";
+import MateHard from "./Screens/materie/mateHard";
+import MateMedium from "./Screens/materie/mateMedium";
+import MateSimple from "./Screens/materie/mateSimple";
 
-import itaHard from "./Screens/materie/itaHard";
-import itaMedium from "./Screens/materie/itaMedium";
-import itaSimple from "./Screens/materie/itaSimple";
+import ItaHard from "./Screens/materie/itaHard";
+import ItaMedium from "./Screens/materie/itaMedium";
+import ItaSimple from "./Screens/materie/itaSimple";
 
 import "./App.css";
 import { Container } from "@material-ui/core";
@@ -34,19 +34,19 @@ const App = () => {
         <div style={styles.container}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/selectionClasse" component={selectionClasse} />
+            <Route exact path="/selectionClasse" component={SelectionClasse} />
 
-            <Route exact path="/ambHard" component={ambHard} />
-            <Route exact path="/ambMedium" component={ambMedium} />
-            <Route exact path="/ambSimple" component={ambSimple} />
+            <Route exact path="/ambHard" component={AmbHard} />
+            <Route exact path="/ambMedium" component={AmbMedium} />
+            <Route exact path="/ambSimple" component={AmbSimple} />
 
-            <Route exact path="/mateHard" component={mateHard} />
-            <Route exact path="/mateMedium" component={mateMedium} />
-            <Route exact path="/mateSimple" component={mateSimple} />
+            <Route exact path="/mateHard" component={MateHard} />
+            <Route exact path="/mateMedium" component={MateMedium} />
+            <Route exact path="/mateSimple" component={MateSimple} />
 
-            <Route exact path="/itaHard" component={itaHard} />
-            <Route exact path="/itaMedium" component={itaMedium} />
-            <Route exact path="/itaSimple" component={itaSimple} />
+            <Route exact path="/itaHard" component={ItaHard} />
+            <Route exact path="/itaMedium" component={ItaMedium} />
+            <Route exact path="/itaSimple" component={ItaSimple} />
           </Switch>
         </div>
       </Router>

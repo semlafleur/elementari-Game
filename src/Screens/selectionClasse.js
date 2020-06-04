@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setDifficult } from '../actions'
 
 
-const selectionClasse = () => {
+const SelectionClasse = () => {
 const level = useSelector(state=>state.changeLevel);
 const dispatch = useDispatch();
 
@@ -18,4 +18,4 @@ const dispatch = useDispatch();
     )
 };
 
-export default selectionClasse;
+export default SelectionClasse;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const itaSimple = () => {
+const ItaSimple = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const itaSimple = () => {
         </>
     );
 };
-export default itaSimple;
+export default ItaSimple;

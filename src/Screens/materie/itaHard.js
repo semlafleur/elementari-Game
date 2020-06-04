@@ -1,6 +1,6 @@
 import React from "react";
 
-const itaHard = () => {
+const ItaHard = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const itaHard = () => {
         </>
     );
 };
-export default itaHard;
+export default ItaHard;

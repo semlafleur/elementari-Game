@@ -1,6 +1,6 @@
 import React from "react";
 
-const ambHard = () => {
+const AmbHard = () => {
   return (
     <>
       <h1>
@@ -9,4 +9,4 @@ const ambHard = () => {
     </>
   );
 };
-export default ambHard
+export default AmbHard

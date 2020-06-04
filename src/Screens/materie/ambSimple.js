@@ -1,6 +1,6 @@
 import React from "react";
 
-const ambSimple = () => {
+const AmbSimple = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const ambSimple = () => {
         </>
     );
 };
-export default ambSimple
+export default AmbSimple

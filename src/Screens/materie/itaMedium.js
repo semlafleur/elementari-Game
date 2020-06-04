@@ -1,6 +1,6 @@
 import React from "react";
 
-const itaMedium = () => {
+const ItaMedium = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const itaMedium = () => {
         </>
     );
 };
-export default itaMedium;
+export default ItaMedium;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const mateHard = () => {
+const MateHard = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const mateHard = () => {
         </>
     );
 };
-export default mateHard;
+export default MateHard;

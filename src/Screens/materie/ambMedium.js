@@ -1,6 +1,6 @@
 import React from "react";
 
-const ambMedium = () => {
+const AmbMedium = () => {
     return (
         <>
             <h1>
@@ -9,4 +9,4 @@ const ambMedium = () => {
         </>
     );
 };
-export default ambMedium
+export default AmbMedium
