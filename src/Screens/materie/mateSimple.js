@@ -40,7 +40,7 @@ const MateSimple = () => {
   const generateButton = (buttonClick) => {
 
     if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417"}} >Corretto</Button>);
-    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417"}} >snagliato</Button>)
+    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000"}} >sbagliato</Button>)
 
   }
 
@@ -64,7 +64,6 @@ const MateSimple = () => {
           falso
         </Button>
         {button}
-        <Button variant={"contained"} color={"primary"} >rifai</Button>
       </div>
     </>
   );
