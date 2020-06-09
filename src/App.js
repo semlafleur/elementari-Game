@@ -1,6 +1,8 @@
 import React from "react";
 import Home from "./Screens/Home";
 import SelectionClasse from "./Screens/selectionClasse";
+import  SelectionMateria from "./Screens/selectionMateria"
+
 
 import AmbHard from "./Screens/materie/ambHard";
 import AmbMedium from "./Screens/materie/ambMedium";
@@ -8,7 +10,7 @@ import AmbSimple from "./Screens/materie/ambSimple";
 
 import MateHard from "./Screens/materie/mateHard";
 import MateMedium from "./Screens/materie/mateMedium";
-import MateSimple from "./Screens/materie/mateSimple";
+import Game from "./Screens/materie/mateSimple";
 
 import ItaHard from "./Screens/materie/itaHard";
 import ItaMedium from "./Screens/materie/itaMedium";
@@ -17,6 +19,7 @@ import ItaSimple from "./Screens/materie/itaSimple";
 import "./App.css";
 import { Container } from "@material-ui/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import selectionMateria from "./Screens/selectionMateria";
 
 const styles = {
   container: {
@@ -35,6 +38,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/selectionClasse" component={SelectionClasse} />
+            <Route exact path="selectionMateria" component={selectionMateria} />
 
             <Route exact path="/ambHard" component={AmbHard} />
             <Route exact path="/ambMedium" component={AmbMedium} />
@@ -42,7 +46,7 @@ const App = () => {
 
             <Route exact path="/mateHard" component={MateHard} />
             <Route exact path="/mateMedium" component={MateMedium} />
-            <Route exact path="/mateSimple" component={MateSimple} />
+            <Route exact path="/mateSimple" component={Game} />
 
             <Route exact path="/itaHard" component={ItaHard} />
             <Route exact path="/itaMedium" component={ItaMedium} />

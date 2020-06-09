@@ -1,16 +1,16 @@
 import React from "react";
 import Button from "../Components/button";
-import { withRouter } from "";
+import { withRouter } from "react-router";
 import { simple } from "../actions";
 import { useSelector } from "react-redux";
 
-const globalState = "Simple";
-
-const ScegliMateria = ({ history }) => {
 
 
+const SelectionMateria = ({ history }) => {
+ const level = useSelector(state => state.checkLevel)
+console.log(level); 
   const checkLevel = (materia) => {
-    return materia + globalState;
+    return materia + level;
   };
 
   return (
@@ -30,4 +30,5 @@ const ScegliMateria = ({ history }) => {
     </>
   );
 };
-export default withRouter(ScegliMateria);
+
+export default withRouter(SelectionMateria);
