@@ -8,8 +8,8 @@ const styles = {
 export const ShowAddiction = ({
   num1 = 1,
   num2 = 2,
-  resullt = 3,
+  result = 3,
 }) => {
-  const operation = num1 + " + " + num2 + " = " + resullt;
+  const operation = num1 + " + " + num2 + " = " + result;
   return <span className={"Numeri"}>{operation}</span>;
 };

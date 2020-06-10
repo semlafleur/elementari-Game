@@ -5,7 +5,8 @@ import { simple, medium, hard } from "../Constants/levels";
 const changeLevel = (state = simple, action) => {
   switch (action.type) {
     case "SETDIFFICULT":
-      return action.value;
+      return state = action.value
+      
     default:
       return state;
   }

@@ -2,10 +2,19 @@
     text-align: center;
     justify-content: center;
     display: flex;
-    clear: both;
+    
   }
   .Numeri {
     font-family: "Indie Flower", cursive;
     font-size: 50px;
   }
-  
+  h1 {
+    font-family: "Indie Flower", cursive;
+    font-size: 75px;
+  }
+  .Home {
+    text-align: center;
+    justify-content: center;
+    display: block;
+
+  }

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../../mateStyle.css";
 import { ShowAddiction } from "../../Components/showCalculate";
 import Button from "@material-ui/core/Button";
+import HomeIcon from '@material-ui/icons/Home';
+import { withRouter } from "react-router";
 
 const styles = {
   true: {
@@ -16,6 +18,7 @@ const styles = {
     marginRight: 20,
     clear: "both",
     display: "block",
+
   },
 };
 const random = Math.floor(Math.random() * 2);
@@ -27,12 +30,11 @@ let correct = undefined;
 const checkValues = () => {
   const correctResult = num1 + num2;
   if (correctResult === result) correct = true;
-  else correct = false;
+  else correct = false;   
 };
 checkValues();
-console.log(result);
 
-const MateSimple = () => {
+const MateSimple = ({history}) => {
   const [button, setbutton] = useState(undefined);
 
   const generateButton = (buttonClick) => {
@@ -41,6 +43,7 @@ const MateSimple = () => {
         <Button
           variant={"contained"}
           style={{ backgroundColor: "#4CC417", marginTop: 100, float: "right" }}
+          onClick={() => alert("Bravo continua così")}
         >
           Corretto
         </Button>
@@ -50,6 +53,8 @@ const MateSimple = () => {
         <Button
           variant={"contained"}
           style={{ backgroundColor: "#FF0000", marginTop: 100, float: "right" }}
+          onClick={() => alert("Hai fatto sbagliato, farai megio la prossima volta")}
+
         >
           sbagliato
         </Button>
@@ -61,11 +66,13 @@ const MateSimple = () => {
   };
 
   return (
-    <div style={{ display: "block" }}>
+    <>
+    <Button onClick={()=> history.push("/")}><HomeIcon/></Button>
+    <h1>Risultato vero o falso ?</h1>
       <div className={"App"}>
-        <ShowAddiction num1={num1} num2={num2} resullt={result} />
+        <ShowAddiction num1={num1} num2={num2} result={result} />
       </div>
-      <div style={styles.div}>
+      <div className={"App"}>
         <Button
           style={styles.true}
           variant={"contained"}
@@ -90,7 +97,7 @@ const MateSimple = () => {
         </Button>
       </div>
       <div>{button}</div>
-    </div>
+    </>
   );
 };
-export default MateSimple;
+export default withRouter(MateSimple);

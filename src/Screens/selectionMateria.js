@@ -3,6 +3,7 @@ import Button from "../Components/button";
 import { withRouter } from "react-router";
 import { simple } from "../actions";
 import { useSelector } from "react-redux";
+import "../mateStyle.css"
 
 const SelectionMateria = ({ history }) => {
   const level = useSelector((state) => state.checkLevel) || "Simple";
@@ -12,6 +13,8 @@ const SelectionMateria = ({ history }) => {
   };
 
   return (
+    <div className="Home">
+    <h1>Scegli la materia che vuoi allenare</h1>
     <div style={{ display: "flex" }}>
       <Button
         value={"Matematica"}
@@ -25,6 +28,7 @@ const SelectionMateria = ({ history }) => {
         value={"Ambiente"}
         onClick={() => history.push("/" + checkLevel("amb"))}
       />
+    </div>
     </div>
   );
 };
