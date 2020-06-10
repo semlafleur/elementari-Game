@@ -18,13 +18,13 @@ const styles = {
   }
 };
 const random = Math.floor(Math.random() * 2);
-const num1 = Math.floor(Math.random() * 50)
-const num2 = Math.floor(Math.random() * 50)
-const result = (random === 1 ? num1 + num2 : Math.floor(Math.random() * 20))
+const num1 = Math.floor(Math.random(25-50) * 50)
+const num2 = Math.floor(Math.random() * 25)
+const result = (random === 1 ? num1 - num2 : Math.floor(Math.random() * 20))
 let correct = undefined;
 
 const checkValues = () => {
-  const correctResult = num1 + num2;
+  const correctResult = num1 - num2;
   if (correctResult === result) correct = true;
   else correct = false;
 };

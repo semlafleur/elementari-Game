@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import TextField from '@material-ui/core/TextField';
 
 
 const ItaSimple = () => {
     const animali = ["cane","gatto", "serpente", ]
+    const  [input, setInput] = useState("")
+    console.log(input)
     return (
-        <>
-        
-           <TextField id="standard-basic" label="Inserisci il nome dell'animale" />
-        </>
+        <div style={{display : "flex"}}>
+      
+           <TextField id="standard-basic" label="Inserisci il nome dell'animale" value={input} onChange={()=> setInput(event.target.value)} />
+           
+        </div>
     );
 };
 export default ItaSimple;
