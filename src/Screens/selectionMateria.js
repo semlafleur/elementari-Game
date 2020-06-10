@@ -14,7 +14,7 @@ console.log(level);
   };
 
   return (
-    <>
+    <div style={{display : "flex",}}>
       <Button
         value={"Matematica"}
         onClick={() => history.push("/" + checkLevel("mate"))}
@@ -27,7 +27,7 @@ console.log(level);
         value={"Ambiente"}
         onClick={() => history.push("/" + checkLevel("amb"))}
       />
-    </>
+    </div>
   );
 };
 

@@ -40,8 +40,8 @@ const MateSimple = () => {
 
   const generateButton = (buttonClick) => {
 
-    if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417"}} >Corretto</Button>);
-    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000"}} >sbagliato</Button>)
+    if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417",marginTop : 10}} >Corretto</Button>);
+    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000",marginTop : 10}} >sbagliato</Button>)
 
   }
   const reload = () => {
@@ -51,7 +51,7 @@ const MateSimple = () => {
 
 
   return (
-    <>
+    <div style={{display : "block"}}>
       <div className={"App"}>
         <ShowAddiction num1={num1} num2={num2} resullt={result} />
       </div>
@@ -68,10 +68,13 @@ const MateSimple = () => {
         }>
           falso
         </Button>
-        {button}
+        
         <Button variant={"contained"} color={"primary"} onClick={() => reload()}>Ricarica</Button>
       </div>
-    </>
+      <div>
+      {button}
+      </div>
+    </div>
   );
 }
 export default MateSimple
