@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 
 const SelectionMateria = ({ history }) => {
- const level = useSelector(state => state.checkLevel)
+ const level = useSelector(state => state.checkLevel) || "Simple"
 console.log(level); 
   const checkLevel = (materia) => {
     return materia + level;
