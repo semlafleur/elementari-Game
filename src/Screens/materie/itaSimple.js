@@ -15,3 +15,5 @@ const ItaSimple = () => {
     );
 };
 export default ItaSimple;
+
+//Mapping e confronto chiave-valore 
