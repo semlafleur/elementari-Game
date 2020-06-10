@@ -9,7 +9,7 @@ const ItaSimple = () => {
     return (
         <div style={{display : "flex"}}>
       
-           <TextField id="standard-basic" label="Inserisci il nome dell'animale" value={input} onChange={()=> setInput(event.target.value)} />
+           <TextField id="standard-basic" label="Inserisci il nome dell'animale" value={input}  />
            
         </div>
     );
