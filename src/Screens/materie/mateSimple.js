@@ -14,7 +14,8 @@ const styles = {
   },
   div: {
     marginRight: 20,
-    clear : 'both'
+    clear : 'both',
+    display : "block"
 
   }
 };
@@ -43,6 +44,10 @@ const MateSimple = () => {
     else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000"}} >sbagliato</Button>)
 
   }
+  const reload = () => {
+    window.location.reload(false);
+    setbutton(undefined);
+  }
 
 
   return (
@@ -64,6 +69,7 @@ const MateSimple = () => {
           falso
         </Button>
         {button}
+        <Button variant={"contained"} color={"primary"} onClick={() => reload()}>Ricarica</Button>
       </div>
     </>
   );
