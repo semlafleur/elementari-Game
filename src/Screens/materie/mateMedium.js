@@ -21,7 +21,8 @@ const styles = {
 };
 const random = Math.floor(Math.random() * 2);
 const num1 = Math.floor(Math.random() * 100)
-const num2 = Math.floor(Math.random() * 100)
+const num2 = Math.floor(Math.random() * 100
+)
 const result = (random === 1 ? num1 + num2 : Math.floor(Math.random() * 20))
 let correct = undefined;
 
@@ -40,8 +41,8 @@ const MateMedium = () => {
 
   const generateButton = (buttonClick) => {
 
-    if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417",marginTop : 10}} >Corretto</Button>);
-    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000",marginTop : 10}} >sbagliato</Button>)
+    if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417",marginTop : 10}} onClick={alert("Hai fatto giusto bravo")} >Corretto</Button>);
+    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000",marginTop : 10}} onClick={alert("Hai fatto giusto bravo")}>sbagliato</Button>)
 
   }
   const reload = () => {
@@ -51,15 +52,14 @@ const MateMedium = () => {
 
 
   return (
-    <div style={{display : "block"}}>
+    <>
+
       <div className={"App"}>
         <ShowAddiction num1={num1} num2={num2} resullt={result} />
       </div>
       <div style={styles.div} >
         <Button style={styles.true} variant={"contained"} onClick={() =>
-          generateButton(true)
-
-        }>
+          generateButton(true)}>
           vero
         </Button>
         <Button style={styles.false} variant={"contained"} onClick={() =>
@@ -74,7 +74,7 @@ const MateMedium = () => {
       <div>
       {button}
       </div>
-    </div>
+    </>
   );
 }
 export default MateMedium;

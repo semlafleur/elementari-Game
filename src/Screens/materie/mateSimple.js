@@ -6,23 +6,22 @@ import Button from "@material-ui/core/Button";
 const styles = {
   true: {
     backgroundColor: "#4CC417",
-    margin : 5,
+    margin: 5,
   },
   false: {
     backgroundColor: "	#FF0000",
-    margin: 5
+    margin: 5,
   },
   div: {
     marginRight: 20,
-    clear : 'both',
-    display : "block"
-
-  }
+    clear: "both",
+    display: "block",
+  },
 };
 const random = Math.floor(Math.random() * 2);
-const num1 = Math.floor(Math.random() * 10)
-const num2 = Math.floor(Math.random() * 10)
-const result = (random === 1 ? num1 + num2 : Math.floor(Math.random() * 20))
+const num1 = Math.floor(Math.random() * 10);
+const num2 = Math.floor(Math.random() * 10);
+const result = random === 1 ? num1 + num2 : Math.floor(Math.random() * 20);
 let correct = undefined;
 
 const checkValues = () => {
@@ -31,50 +30,67 @@ const checkValues = () => {
   else correct = false;
 };
 checkValues();
-console.log(result)
+console.log(result);
 
 const MateSimple = () => {
-  const [button, setbutton] = useState(undefined)
-
-
+  const [button, setbutton] = useState(undefined);
 
   const generateButton = (buttonClick) => {
-
-    if (correct === buttonClick) setbutton(<Button variant={"contained"} style={{backgroundColor :"#4CC417",marginTop : 10}} >Corretto</Button>);
-    else setbutton(<Button variant={"contained"} style={{backgroundColor :"#FF0000",marginTop : 10}} >sbagliato</Button>)
-
-  }
+    if (correct === buttonClick)
+      setbutton(
+        <Button
+          variant={"contained"}
+          style={{ backgroundColor: "#4CC417", marginTop: 100, float: "right" }}
+        >
+          Corretto
+        </Button>
+      );
+    else
+      setbutton(
+        <Button
+          variant={"contained"}
+          style={{ backgroundColor: "#FF0000", marginTop: 100, float: "right" }}
+        >
+          sbagliato
+        </Button>
+      );
+  };
   const reload = () => {
     window.location.reload(false);
     setbutton(undefined);
-  }
-
+  };
 
   return (
-    <div style={{display : "block"}}>
+    <div style={{ display: "block" }}>
       <div className={"App"}>
         <ShowAddiction num1={num1} num2={num2} resullt={result} />
       </div>
-      <div style={styles.div} >
-        <Button style={styles.true} variant={"contained"} onClick={() =>
-          generateButton(true)
-
-        }>
+      <div style={styles.div}>
+        <Button
+          style={styles.true}
+          variant={"contained"}
+          onClick={() => generateButton(true)}
+        >
           vero
         </Button>
-        <Button style={styles.false} variant={"contained"} onClick={() =>
-          generateButton(false)
-
-        }>
+        <Button
+          style={styles.false}
+          variant={"contained"}
+          onClick={() => generateButton(false)}
+        >
           falso
         </Button>
-        
-        <Button variant={"contained"} color={"primary"} onClick={() => reload()}>Ricarica</Button>
+
+        <Button
+          variant={"contained"}
+          color={"primary"}
+          onClick={() => reload()}
+        >
+          Ricarica
+        </Button>
       </div>
-      <div>
-      {button}
-      </div>
+      <div>{button}</div>
     </div>
   );
-}
-export default MateSimple
+};
+export default MateSimple;

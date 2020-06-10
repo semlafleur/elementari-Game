@@ -1,8 +1,7 @@
 import React from "react";
 import Home from "./Screens/Home";
 import SelectionClasse from "./Screens/selectionClasse";
-import  SelectionMateria from "./Screens/selectionMateria"
-
+import SelectionMateria from "./Screens/selectionMateria";
 
 import AmbHard from "./Screens/materie/ambHard";
 import AmbMedium from "./Screens/materie/ambMedium";
@@ -36,7 +35,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/selectionClasse" component={SelectionClasse} />
-            <Route exact path="selectionMateria" component={SelectionMateria} />
+            <Route exact path="/selectionMateria"component={SelectionMateria}/>
 
             <Route exact path="/ambHard" component={AmbHard} />
             <Route exact path="/ambMedium" component={AmbMedium} />

@@ -4,17 +4,15 @@ import { withRouter } from "react-router";
 import { simple } from "../actions";
 import { useSelector } from "react-redux";
 
-
-
 const SelectionMateria = ({ history }) => {
- const level = useSelector(state => state.checkLevel) || "Simple"
-console.log(level); 
+  const level = useSelector((state) => state.checkLevel) || "Simple";
+  console.log(level);
   const checkLevel = (materia) => {
     return materia + level;
   };
 
   return (
-    <div style={{display : "flex",}}>
+    <div style={{ display: "flex" }}>
       <Button
         value={"Matematica"}
         onClick={() => history.push("/" + checkLevel("mate"))}
