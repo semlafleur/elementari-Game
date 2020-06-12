@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "../../mateStyle.css";
 import Show from "../../Components/showCalculateAdvansed";
 import Button from "@material-ui/core/Button";
-import HomeIcon from '@material-ui/icons/Home';
-
+import RefreshIcon from '@material-ui/icons/Refresh';
+import HomeIcon from "@material-ui/icons/Home"
 import { withRouter } from "react-router"
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 
 const styles = {

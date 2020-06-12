@@ -18,3 +18,12 @@
     display: block;
 
   }
+  img {
+    width: 35%;
+    height: 35%;
+    max-height: 325px;
+  }
+Button{
+  margin: 10;
+  border: 10;
+}

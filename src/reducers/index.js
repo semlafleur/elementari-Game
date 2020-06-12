@@ -5,7 +5,7 @@ import { simple, medium, hard } from "../Constants/levels";
 const changeLevel = (state = simple, action) => {
   switch (action.type) {
     case "SETDIFFICULT":
-      return state = action.value
+      return action.value
       
     default:
       return state;
@@ -16,3 +16,4 @@ const allReducers = combineReducers({
 });
 
 export default allReducers;
+// make an object state and check with includes 
