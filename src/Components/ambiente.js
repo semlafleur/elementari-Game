@@ -44,7 +44,6 @@ const Ambiente = ({ history,image,imageString ,spec, onClick1, onClick2 }) => {
     const random = Math.floor(Math.random() * 5);
     setbutton(undefined);
     setInput("");
-    console.log(input);
     if (randomIndex === random || imageUlitizated.includes(random))
       return setPitcure();
     imageUlitizated.push(random);

@@ -24,8 +24,8 @@ const AmbHard = ({history}) => {
   return (
     <>
    
-      <Ambiente image={animal} imageString={animalString} spec={"Scrivi la specie esatta dell'animale"} onClick1={() => history.push("/selectionMateria")} onCLick2={() => history.push("/")}/>
+      <Ambiente image={animal} imageString={animalString} onClick1={() => history.push("/selectionMateria")} onCLick2={() => history.push("/")}/>
     </>
   );
 };
-export default AmbHard
+export default withRouter(AmbHard)

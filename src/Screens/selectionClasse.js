@@ -8,19 +8,13 @@ import "../mateStyle.css"
 
 const SelectionClasse = ({ history }) => {
    
-
-    const wrapFunction = (difficult) => {
-        history.push("/selectionMateria")
-      
-    }
-
     return (
         <div className="Home">
         <h1>Scegli la tua Classe...</h1>
         <div style={{display : "flex"}}>
-            <Button value={" 1-2 elementare"} onClick={() => wrapFunction("Simple")} />
-            <Button value={"3-4 elementare"} onClick={() => wrapFunction("Medium")} />
-            <Button value={"5 elementare"} onClick={() => wrapFunction("Hard")} />
+            <Button value={" 1-2 elementare"} onClick={() => history.push("/Simple")} />
+            <Button value={"3-4 elementare"} onClick={() => history.push("/Medium")} />
+            <Button value={"5 elementare"} onClick={() => history.push("/Hard")} />
         </div>
 
         </div>

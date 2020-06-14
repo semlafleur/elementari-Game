@@ -5,9 +5,7 @@ import { simple } from "../actions";
 import { useSelector } from "react-redux";
 import "../mateStyle.css"
 
-const SelectionMateria = ({ history }) => {
-  const level = useSelector((state) => state.checkLevel) || "Simple";
-  console.log(level)
+const SelectionMateria = ({ history, level }) => {
   const checkLevel = (materia) => {
     return materia + level;
   };
