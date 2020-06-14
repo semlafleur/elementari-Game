@@ -1,10 +1,17 @@
 import React from 'react';
 
-export const setDifficult = (value) => {
+export const simple = () => {
     return {
-        type: 'SETDIFFICULT',
-        value : value
+        type: 'SIMPLE',
     }
 };
-
-
+export const medium = () => {
+    return {
+        type: 'MEDIUM',
+    }
+};
+export const hard = () => {
+    return {
+        type: 'HARD',
+    }
+};

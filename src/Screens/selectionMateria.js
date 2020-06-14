@@ -7,7 +7,7 @@ import "../mateStyle.css"
 
 const SelectionMateria = ({ history }) => {
   const level = useSelector((state) => state.checkLevel) || "Simple";
-  console.log(level);
+  console.log(level)
   const checkLevel = (materia) => {
     return materia + level;
   };

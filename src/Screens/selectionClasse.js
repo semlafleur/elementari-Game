@@ -2,19 +2,16 @@ import React from 'react'
 import Button from '../Components/button'
 import { withRouter } from "react-router"
 import { useDispatch, useSelector } from 'react-redux'
-import { setDifficult } from '../actions'
+import { simple,medium,difficult, hard } from '../actions'
 import "../mateStyle.css"
 
 
-
 const SelectionClasse = ({ history }) => {
-    const dispatch = useDispatch();
-    const level = useSelector(state => state.checkLevel)
-    const wrapFunction = (difficult) => {
-        dispatch(setDifficult(difficult));
-        history.push("/selectionMateria")
-        console.log(level)
+   
 
+    const wrapFunction = (difficult) => {
+        history.push("/selectionMateria")
+      
     }
 
     return (
