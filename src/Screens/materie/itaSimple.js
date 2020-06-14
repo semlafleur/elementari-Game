@@ -18,7 +18,6 @@ const styles = {
   };
 
 const animal = [ gattoAudio, caneAudio ];
-console.log(gattoAudio)
 const animalString = ["gatto", "cane"];
 const audioUtilizated = [];
 
